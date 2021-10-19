@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML CSS Register Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <form class="signup-form" action="/register" method="post">
+
+      <!-- form header -->
+      <div class="form-header">
+        <h1>Add New Customer</h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body">
+
+        <!-- Firstname and Lastname -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="firstname" class="label-title">First name of Customer</label>
+            <input type="text" id="firstname" class="form-input" placeholder="enter first name" required="required" />
+          </div>
+          <div class="form-group right">
+            <label for="lastname" class="label-title">Last name of Customer</label>
+            <input type="text" id="lastname" class="form-input" placeholder="enter your last name" />
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email" class="label-title">Email</label>
+          <input type="email" id="email" class="form-input" placeholder="enter email" required="required">
+        </div>
+
+<div class="form-group">
+          <label for="Number" class="label-title">Contact Number</label>
+          <input type="text" id="Number" class="form-input" placeholder="enter Number" >
+        </div>
+
+     
+        <!-- Gender and Hobbies -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label class="label-title">Gender:</label>
+            <div class="input-group">
+              <label for="male"><input type="radio" name="gender" value="male" id="male"> Male</label>
+              <label for="female"><input type="radio" name="gender" value="female" id="female"> Female</label>
+            </div>
+          </div>
+          <div class="form-group right">
+            <label class="label-title">Type Of Customer</label>
+            <div >
+              <label><input type="checkbox" value="WholeSaler">WholeSaler</label>
+              <label><input type="checkbox" value="Retailer">Retailer</label>
+            </div>
+          </div>
+        </div>
+
+
+
+      <!-- form-footer -->
+      <div class="form-footer">
+        <button type="submit" class="btn">Add</button>
+      </div>
+
+    </form>
+
+    <!-- Script for range input label -->
+    <script>
+      var rangeLabel = document.getElementById("range-label");
+      var experience = document.getElementById("experience");
+
+      function change() {
+      rangeLabel.innerText = experience.value + "K";
+      }
+    </script>
+
+  </body>
+</html>
